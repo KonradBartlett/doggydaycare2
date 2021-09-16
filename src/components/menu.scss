@@ -1,7 +1,6 @@
 
 .menu{
     position: fixed;
-    top: 20vh;
     z-index: 3;
     left: -2px;
     transition: 0.45s cubic-bezier(0, 0, 0.2, 1);
@@ -12,49 +11,58 @@
         left: 2px;
     }
 
-    #bone_icon{
-        padding: 1em;
-        background: var(--bg);
-        border: 2px solid var(--border-color); 
-        border-left: none; 
-        border-top-right-radius: 9px;
-        border-bottom-right-radius: 9px;
-        cursor: pointer;
-        path{
-            fill: var(--border-color);
-            transform: rotate(0deg);
-            transform-origin: center;
-            transition: 0.45s cubic-bezier(0, 0, 0.2, 1);
-        }
-    }
-    #bone_icon:hover{
-        filter: brightness(0.9);
-    }
-
     #menu_body{
         position: absolute;
-        background: var(--bg);
         color: var(--text);
-        min-height: 20em;
-        width: 20em;
-        left: -20em;
+        padding: 0 3em;
         top: 0;
-        border: 2px solid var(--border-color); 
-        box-shadow: 4px 14px 18px 5px rgba(66, 53, 40, 0.5);
-        border-bottom-right-radius: 9px;
-
         display: flex;
         flex-direction: column;
         gap: 5px;
+        justify-content: space-around;
+        align-content: stretch;
+        height: 100vh;
+
+        #bottom_spacer{
+            padding: 6em;
+        }
 
         .link{
             padding: 1em 2em;
             margin: 3px;
             width: calc(100% - 4em - 6px);
-            background: var(--bg);
             text-align: center;
             border-radius: 9px;
             cursor: pointer;
+            transform: rotate(270deg);
+
+            .text{
+                opacity: 0;
+                transition: 0.6s ease-out;
+                transform: translateY(2em);
+            }
+            svg{
+                width: 10px;
+                fill: none;
+                opacity: 1;
+            }
+            .circle{
+                fill: transparent;
+                transition: 0.2s ease-in;
+
+            }
+        }
+        .link:hover{
+            svg{
+                circle{
+                    fill:salmon;
+
+                }
+            }
+            .text{
+                opacity: 1;
+                transform: translateY(0em);
+            }
         }
     }
 
@@ -63,15 +71,23 @@
             transform: rotate(360deg);
         }
     }
+
+    a {
+        color: #0060B6;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        color:#00A0C6; 
+        text-decoration:none; 
+        cursor:pointer;  
+    }
 }
 
 
 
 // desktop
 @media (min-width: 640px){
-    .show{
-        left: 20em;
-    }
 }
 
 .small_menu{

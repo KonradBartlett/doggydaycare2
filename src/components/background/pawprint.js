@@ -1,4 +1,4 @@
-import {ReactComponent as Paw} from '../assets/pawprint.svg';
+import {ReactComponent as Paw} from '../../assets/pawprint.svg';
 
 export const PawPrint = ({top, side, index}) => {
     return (

@@ -1,0 +1,23 @@
+.trail { 
+  position: absolute;
+  height: 6px; width: 6px;
+  border-radius: 3px;
+  background: teal;
+}
+
+#cursor{
+  display: block;
+  -webkit-transform-origin: center center;
+  pointer-events: none;
+  .circle{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: transparent;
+    transform-origin: center center;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    background-color: #e99e17;
+  }
+}

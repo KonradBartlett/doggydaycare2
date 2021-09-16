@@ -1,11 +1,13 @@
 import { useEffect } from 'react';
 
-import { Background } from './components/background';
+import { Background } from './components/background/background';
 import { Footer } from './components/footer';
 
 import { Home } from './pages/home';
 
 import './app.scss';
+import { Menu } from './components/menu';
+import { Cursor } from './components/cursor';
 
 function App() {
 
@@ -22,9 +24,9 @@ function App() {
                 <Logo/>
               </div>
           </nav> */}
-          
+          <Menu />
+          <Cursor/>
           <Home/>
-          <Footer/>
           <Background/>
       </main>
   );

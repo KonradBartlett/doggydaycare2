@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import {ReactComponent as Logo} from '../assets/logo.svg';
+
 import './menu.scss';
 
 export const Menu = () => {
@@ -25,25 +27,36 @@ export const Menu = () => {
         }
     }
 
+    const Dot = () => {
+        return(
+            <svg viewBox="0 0 9 9" stroke="var(--border-color)" strokeWidth="2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle className="circle" cx="4.5" cy="4.5" r="4"/>
+            </svg>
+        )
+    }
+
+    const Link = ({section, title}) => {
+        return <a className="link dark_hover" href="#!" onClick={() => {clickLink(section);}}><p className="text">{title}</p><br/><Dot/></a>
+
+    }
+
     const Links = () => {
         return (
             <>
-                <a className="link dark_hover" href="#!" onClick={() => {clickLink('top');}}>Home</a>
-                <a className="link dark_hover" href="#!" onClick={() => {clickLink('services');}}>Services Offered</a>
-                <a className="link dark_hover" href="#!" onClick={() => {clickLink('team');}}>Meet The Team</a>
-                <a className="link dark_hover" href="#!" onClick={() => {clickLink('location');}}>Location</a>
-                <a className="link dark_hover" href="#!" onClick={() => {clickLink('contact');}}>Contact</a>
-                <a className="link dark_hover" href="#!" onClick={() => {clickLink('gallery');}}>Gallery</a>
+                <Logo />
+                <Link section="top" title="Home"/>
+                <Link section="services" title="Services"/>
+                <Link section="team" title="Team"/>
+                <Link section="location" title="Location"/>
+                <Link section="contact" title="Contact"/>
+                <Link section="gallery" title="Gallery"/>
             </>
         );
     }
 
     return (
-        <div style={{'flexGrow': '1'}}>
+        <nav id="nav" style={{'flexGrow': '1'}}>
             <div className={`menu large ${showMenu}`}>
-                <div id="menu_icon" className={spin}>
-                    {/* <Icon title="toggle menu" onClick={toggleMenu}/> */}
-                </div>
                 <div id="menu_body">
                     <Links />
                 </div>
@@ -56,6 +69,6 @@ export const Menu = () => {
                     <Links />
                 </div>
             </div>
-        </div>
+        </nav>
     );
 }
