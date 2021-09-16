@@ -1,0 +1,17 @@
+
+.footer {
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding: 2em 0;
+    border-top: 2px solid var(--border-color);
+    a{
+      padding: 5px;
+      background: var(--bg);
+      border-radius: 3px;
+    }
+    a:hover{
+      filter: invert(0.9);
+    }
+  }
