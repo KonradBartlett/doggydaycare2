@@ -28,6 +28,7 @@ export const Floater = ({top, left, index}) => {
         case 9: return  <div><Float10 key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/></div>
         case 10: return <div><Float11 key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/></div>
         case 11: return <div><Float12 key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/></div>
+        default: return <div></div>
 
             
     }

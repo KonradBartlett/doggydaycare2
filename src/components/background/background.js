@@ -1,36 +1,26 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './background.scss';
 import { Floater } from './floater';
 import { PawPrint } from './pawprint';
 
 export const Background = () => { 
 
-    const [Paws, setPaws] = useState([]);
+    var pawRefs = useRef({});
+
     const [Floaters, setFloaters] = useState([]);
+    const [Paws, setPaws] = useState([]); 
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
+        setPaws(Array.from(new Array(90)).map((_, index) => <PawPrint key={`paw_${index}`} top={`${(index * (document.documentElement.scrollHeight /100))}px`} side={index % 2 === 0 ? 'left' : 'right'} index={index} ref = {ref => pawRefs.current[index] = ref}/>));
+        setFloaters(Array.from(new Array(80)).map((_, index) => <Floater key={`floater_${index}`} index={index} top={`${(index * (document.documentElement.scrollHeight /80))}px`} left={Math.random() * 90 + 5}/>));
 
-        setPaws(
-            [...Array(90)].map((paw, index) => {
-                return <PawPrint key={`paw_${index}`} top={`${(index * (document.documentElement.scrollHeight /100))}px`} side={index % 2 === 0 ? 'left' : 'right'} index={index} />
-            })
-        );
-        setFloaters(
-            [...Array(80)].map((_, index) => {
-                console.log(Math.random() * 90 + 5)
-                return <Floater index={index} top={`${(index * (document.documentElement.scrollHeight /80))}px`} left={Math.random() * 90 + 5} />
-            })
-        );
-        
         return(() => {window.removeEventListener('scroll', handleScroll);});
-        
     }, []);
 
     const handleScroll = () => {
-        [...Array(90)].map((_, index) => {
-            let element = document.getElementById(`paw_${index}`);
-            console.log(element.getBoundingClientRect().top);
+        [...Array(90)].forEach((_, index) => {
+            let element = pawRefs.current[index];
             if( element.getBoundingClientRect().top < 300 ){
                 element.style.opacity = 0.8;
             }
