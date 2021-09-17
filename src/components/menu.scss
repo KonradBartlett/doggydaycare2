@@ -27,6 +27,8 @@
             padding: 6em;
         }
 
+
+
         .link{
             padding: 1em 2em;
             margin: 3px;
@@ -35,6 +37,8 @@
             border-radius: 9px;
             cursor: pointer;
             transform: rotate(270deg);
+            border: 2px solid var(--border-color);
+
 
             .text{
                 opacity: 0;
@@ -63,12 +67,6 @@
                 opacity: 1;
                 transform: translateY(0em);
             }
-        }
-    }
-
-    .spin{
-        #bone_icon > path{
-            transform: rotate(360deg);
         }
     }
 

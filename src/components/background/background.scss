@@ -48,7 +48,7 @@
         .paw{
             position: absolute;
             opacity: 0;
-            fill: var(--gray6);
+            fill: var(--gray5);
             transition: 1.5s ease-out;
         }
         .left{
@@ -63,7 +63,7 @@
         .background_dog{
             position: absolute;
             width: 6em;
-            right: 1em;
+            right: 0em;
             top: -100%;
             transition: 1s ease-in-out;
         }
