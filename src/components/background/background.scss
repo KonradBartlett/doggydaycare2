@@ -59,6 +59,20 @@
             right: 4em;
             transform: rotate(190deg);
         }
+
+        .background_dog{
+            position: absolute;
+            width: 6em;
+            right: 1em;
+            top: -100%;
+            transition: 1s ease-in-out;
+        }
+        .show{
+            opacity: 1;
+        }
+        .hide{
+            opacity: 0;
+        }
     }
 
     #floaters{
