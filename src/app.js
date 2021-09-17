@@ -3,6 +3,11 @@ import { useEffect } from 'react';
 import { Background } from './components/background/background';
 
 import { Home } from './pages/home';
+import { Services } from './pages/services';
+import { Team } from './pages/team';
+import { Location } from './pages/location';
+import { Contact } from './pages/contact';
+import { Gallery } from './pages/gallery';
 
 import './app.scss';
 import { Menu } from './components/menu';
@@ -24,6 +29,14 @@ function App() {
               </div>
           </nav> */}
           <Menu />
+
+          <Home />
+          <Services />
+          <Team />
+          <Location />
+          <Contact />
+          <Gallery />
+
           <Cursor length={6}/>
           <Home/>
           <Background/>

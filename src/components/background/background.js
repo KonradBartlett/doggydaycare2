@@ -17,7 +17,6 @@ export const Background = () => {
         setPaws(Array.from(new Array(90)).map((_, index) => <PawPrint key={`paw_${index}`} top={`${(index * (document.documentElement.scrollHeight /100))}px`} side={index % 2 === 0 ? 'left' : 'right'} index={index} ref = {ref => pawRefs.current[index] = ref}/>));
         setFloaters(Array.from(new Array(80)).map((_, index) => <Floater key={`floater_${index}`} index={index} top={`${(index * (document.documentElement.scrollHeight /80))}px`} left={Math.random() * 90 + 5}/>));
 
-        // dogRef.current.children[1].style.opacity = 0;
         var checkPrints = setInterval(() => {
             [...Array(90)].forEach((_, index) => {
                 let element = pawRefs.current[index];
@@ -46,7 +45,7 @@ export const Background = () => {
 
     return(
         <div id="background">
-            <div id="prints">
+            <div id="prints" className="large">
                 {Paws}
                 <Dog ref={dogRef} />
             </div>
