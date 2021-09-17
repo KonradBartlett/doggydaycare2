@@ -55,7 +55,7 @@
         .link:hover{
             svg{
                 circle{
-                    fill:salmon;
+                    fill:#f5c875;
 
                 }
             }
@@ -73,14 +73,14 @@
     }
 
     a {
-        color: #0060B6;
+        color: #b67600;
         text-decoration: none;
+        cursor:pointer;  
     }
     
     a:hover {
-        color:#00A0C6; 
+        color:#c6a200; 
         text-decoration:none; 
-        cursor:pointer;  
     }
 }
 

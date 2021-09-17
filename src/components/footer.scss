@@ -10,6 +10,8 @@
       padding: 5px;
       background: var(--bg);
       border-radius: 3px;
+      text-decoration: none;
+      color: var(--text);
     }
     a:hover{
       filter: invert(0.9);

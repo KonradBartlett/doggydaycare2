@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 
 import { Background } from './components/background/background';
-import { Footer } from './components/footer';
 
 import { Home } from './pages/home';
 
@@ -25,7 +24,7 @@ function App() {
               </div>
           </nav> */}
           <Menu />
-          <Cursor/>
+          <Cursor length={6}/>
           <Home/>
           <Background/>
       </main>
