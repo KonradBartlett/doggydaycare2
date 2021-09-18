@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import './background.scss';
-import { Dog } from './dog';
+import { Dog, FooterDogs } from './dog';
 import { Floater } from './floater';
 import { PawPrint } from './pawprint';
+
+const seed = Math.ceil(Math.random() * 8);
 
 export const Background = () => { 
 
@@ -28,8 +30,11 @@ export const Background = () => {
                 dogRef.current.children[0].style.opacity = 0;
                 dogRef.current.children[0].style.top = window.pageYOffset + window.innerHeight - 350;
                 dogRef.current.children[1].style.opacity = 1;
-                dogRef.current.children[1].style.top = window.pageYOffset + window.innerHeight - 150;
-                clearInterval(checkPrints)
+            }
+            if(pawRefs.current[Object.keys(pawRefs.current).length - 1].style.opacity > 0){
+                setTimeout(() => {
+                    clearInterval(checkPrints)
+                }, 600);
             }
         }, 500);
 
@@ -37,17 +42,24 @@ export const Background = () => {
     }, []);
 
     const handleScroll = () => {
-        if( offsetY(dogRef.current.children[0]) < window.pageYOffset + 300 ){
-            dogRef.current.children[0].style.top = window.pageYOffset + 300;
-            dogRef.current.children[1].style.top = window.pageYOffset + 300;
+        if(pawRefs.current[Object.keys(pawRefs.current).length - 1].style.opacity !== 1){
+            if( offsetY(dogRef.current.children[0]) < window.pageYOffset + 300 ){
+                dogRef.current.children[0].style.top = window.pageYOffset + 300;
+            }
         }
     };
 
+    console.log(seed)
+
     return(
         <div id="background">
-            <div id="prints" className="large">
-                {Paws}
-                <Dog ref={dogRef} />
+            <div className="large">
+                <FooterDogs seed={seed}/>
+                <div id="prints">
+                    {Paws}
+                    <Dog ref={dogRef} seed={seed}/>
+                </div>
+
             </div>
             <div id="floaters">
                 {Floaters}
