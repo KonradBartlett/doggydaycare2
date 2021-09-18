@@ -13,8 +13,6 @@ import {ReactComponent as Float12} from '../../assets/float12.svg';
 
 export const Floater = ({top, left, index}) => {
     
-    let speed = Math.ceil(Math.random() * 6);
-
     switch(index % 12){
         case 0: return  <div><Float1  key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/></div>
         case 1: return  <div><Float2  key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/></div>
@@ -29,8 +27,5 @@ export const Floater = ({top, left, index}) => {
         case 10: return <div><Float11 key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/></div>
         case 11: return <div><Float12 key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/></div>
         default: return <div></div>
-
-            
     }
-    
 }

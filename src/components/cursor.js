@@ -54,7 +54,7 @@ export const Cursor = ({length}) => {
     });
 
     return (
-        <div id="cursor">
+        <div id="cursor" className="large">
             {paws}
         </div>
     )
