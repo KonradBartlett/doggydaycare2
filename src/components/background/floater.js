@@ -14,18 +14,18 @@ import {ReactComponent as Float12} from '../../assets/float12.svg';
 export const Floater = ({top, left, index}) => {
     
     switch(index % 12){
-        case 0: return  <div><Float1  key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/></div>
-        case 1: return  <div><Float2  key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/></div>
-        case 2: return  <div><Float3  key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/></div>
-        case 3: return  <div><Float4  key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/></div>
-        case 4: return  <div><Float5  key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/></div>
-        case 5: return  <div><Float6  key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/></div>
-        case 6: return  <div><Float7  key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/></div>
-        case 7: return  <div><Float8  key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/></div>
-        case 8: return  <div><Float9  key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/></div>
-        case 9: return  <div><Float10 key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/></div>
-        case 10: return <div><Float11 key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/></div>
-        case 11: return <div><Float12 key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/></div>
-        default: return <div></div>
+        case 0: return  <Float1  key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/>
+        case 1: return  <Float2  key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/>
+        case 2: return  <Float3  key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/>
+        case 3: return  <Float4  key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/>
+        case 4: return  <Float5  key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/>
+        case 5: return  <Float6  key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/>
+        case 6: return  <Float7  key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/>
+        case 7: return  <Float8  key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/>
+        case 8: return  <Float9  key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/>
+        case 9: return  <Float10 key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/>
+        case 10: return <Float11 key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/>
+        case 11: return <Float12 key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/>
+        default: return <Float12 key={`floater_${index}`} className={`floater`} id={`floater_${index}`} style={{top: `calc(${top})`, left: `${left}vw`}}/>
     }
 }

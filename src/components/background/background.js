@@ -1,4 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
+
+import {offsetY} from '../../utils/offsetY';
+
 import './background.scss';
 import { Dog, FooterDogs } from './dog';
 import { Floater } from './floater';
@@ -49,8 +52,6 @@ export const Background = () => {
         }
     };
 
-    console.log(seed)
-
     return(
         <div id="background">
             <div className="large">
@@ -69,10 +70,3 @@ export const Background = () => {
         </div>
     );
 };
-    
-
-function offsetY(el) {
-    var rect = el.getBoundingClientRect(),
-    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    return rect.top + scrollTop 
-}

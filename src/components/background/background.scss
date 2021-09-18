@@ -91,6 +91,14 @@
         }
     }
 
+    .rainbow{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 26em;
+        filter: sepia(0.3);
+    }
+
     #floaters{
         z-index: 0;
         .floater{
