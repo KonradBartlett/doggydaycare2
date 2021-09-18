@@ -19,7 +19,7 @@ function App() {
   },[])
 
   return (
-      <main style={{height: '4000px'}}>
+      <main>
           {/* <nav className="navbar">
               <div className="navbar-nav">
                 <Menu/>
